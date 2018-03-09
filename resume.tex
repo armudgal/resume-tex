@@ -1,0 +1,131 @@
+% Original author: Unknown (ShareLatex Template)
+% Modified by: Arushit Mudgal
+
+\documentclass[a4paper,1pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+\usepackage{enumitem}
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+\addtolength{\voffset}{-0cm}
+%Added by kira0204 to set bottom margin
+\addtolength{\textheight}{0.5cm}
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Arushit Mudgal with \XeTeX\  \today\ for 
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for us+91 9790064737\\e with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Arushit \textsc{Mudgal}
+		
+	}\href{mailto:rshtmudgal@gmail.com}{rshtmudgal@gmail.com} | +91 9790064737\\
+	%\href{https://www.quora.com/profile/Arushit-Mudgal}{quora.com/profile/Arushit-Mudgal}\\
+	\href{http://github.com/kira0204}{github.com/kira0204}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+%\section{Personal Data}
+%
+%\begin{tabular}{rl}
+ %    \textsc{Phone:}     & +91 9790064737\\
+  %  \textsc{email:}     & \href{mailto:rshtmudgal@gmail.com}{rshtmudgal@gmail.com}
+%\end{tabular}
+
+%Section: Work Experience at the top
+\section{Work Experience}
+\begin{tabular}{r|p{11cm}}
+
+ \textsc{Jun-Aug 2017} & Back-end Developer (Intern) at \textsc{Circuitstock}, Vellore \\&\href{https://www.facebook.com/circuitstock/}{fb.com/circuitstock}\\&\footnotesize{Developed back-end of the website in PHP and implemented a point based system for users which increased the user-base by 30\% within a month}\\\multicolumn{2}{c}{} \\
+\textsc{May-Jun 2017} & Summer Intern at \textsc{Codec Networks}, Delhi \\&\href{https://www.codecnetworks.com}{www.codecnetworks.com}\\&\footnotesize{Found and analyzed 3 vulnerabilities in client network and explored the domain of Web Application Penetration Testing}
+\end{tabular}
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}	
+ \textsc{May} 2019 & Bachelor of Technology in \textsc{Computer Science} and \textsc{Engineering}\\& \textbf{Vellore Institute of Technology}, Vellore\\&
+ \normalsize \textsc{GPA}: 8.44/10\\&\\
+\textsc{May} 2015& High School (\textsc{Physics}, \textsc{Chemistry} and \textsc{Mathematics})\\&
+\normalsize\textbf{Seth Anandram Jaipuria School}, Ghaziabad
+\\&\normalsize \textsc{Aggregate}: 89.6/100\\
+\end{tabular}
+
+%Section: Projects
+\section{Projects}
+\begin{tabular}{r|p{11cm}}
+
+\textsc{Ongoing} & \textbf{PlayBit} \\&\footnotesize{A musical app in which all transactions will be made through Bitcoin. Developing the Website on MEAN stack and using the \href{http://bcoin.io/}{bcoin API} to access the Blockchain}\\\multicolumn{2}{c}{}\\
+\textsc{April 2017} & \textbf{IEEE-VIT Website} \\&\href{https://ieeevit.com}{ieeevit.com}\\&\footnotesize{Edited the website and made changes to make the website eligible for \href{http://sac.ieeer10.org/website-contest/}{IEEE R10 SB Website Contest}}\\\multicolumn{2}{c}{} \\
+ \textsc{January 2017} & \textbf{Enigma Website} \\&\href{http://enigma2.ieeevit.com/}{enigma2.ieeevit.com}\\&\footnotesize{Led the front-end development team and developed the website using HTML5, CSS3, Bootstrap, jQuery. The website witnessed a participation of over 800 students in 3 days}\\\multicolumn{2}{c}{} 
+
+\end{tabular}
+
+\section{Extracurricular Activities}{\raggedbottom}
+\begin{itemize}
+    \item \textbf{Head of Technology Department} at IEEE-VIT leading a team of 12 developers
+\item \textbf{Head of Projects Department} at Venturesity-VIT overseeing 4 ongoing projects
+\item \textbf{Technical Speaker} on Cyber Security at Vellore Institute of Technology, Vellore
+\item \textbf{Contributor} of \href{https://github.com/mitmproxy/mitmproxy}{mitmproxy}
+\item \textbf{Contributor} of \href{https://github.com/sendgrid/sendgrid-python}{sendgrid-python}
+\item \textbf{Volunteer} at \href{https://www.cry.org/}{Child Rights and You} Non-Governmental Organization
+\item \textbf{Secretary}(2012-2013) of Ryan Ghaziabad Model United Nations Society
+\end{itemize}
+
+
+\end{document}
+
